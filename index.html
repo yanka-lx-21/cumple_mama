@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mamá en tu Cumpleaños</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Portada inicial -->
+        <div class="cover" id="cover">
+            <div class="cover-content">
+                <h1>💖 Para Mamá 💖</h1>
+                <p class="subtitle">En tu 57° cumpleaños</p>
+                <div class="message">
+                    <p>Para la mujer que mas amo en este mundo</p>
+                </div>
+                <button class="start-btn" id="startBtn">
+                    🌹 Ver tu regalo
+                </button>
+            </div>
+        </div>
+
+        <!-- Contenedor principal de la flor -->
+        <div class="main-app" id="mainApp" style="display: none;">
+            <!-- Encabezado con contador y botón de volver -->
+            <div class="app-header">
+                <button class="back-home-btn" id="backHomeBtn">
+                    ← Volver al inicio
+                </button>
+                <h2>La Rosa de mi Amor</h2>
+                <div class="counter">
+                    <span id="currentReason">0</span> / <span id="totalReasons">30</span> pétalos descubiertos
+                </div>
+            </div>
+
+            <div class="content-wrapper">
+                <!-- Sección izquierda: La flor -->
+                <div class="flower-section">
+                    <div class="flower-container">
+                        <div class="flower" id="flower">
+                            <!-- Centro de la flor -->
+                            <div class="flower-center" id="flowerCenter">
+                                ❤️
+                            </div>
+                            
+                            <!-- Los pétalos se generarán con JavaScript -->
+                            <div class="petals-container" id="petalsContainer">
+                                <!-- Los pétalos se agregarán aquí -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progressBar"></div>
+                        <div class="progress-text" id="progressText">0% completado</div>
+                    </div>
+                </div>
+
+                <!-- Sección derecha: El mensaje -->
+                <div class="message-section">
+                    <div class="message-card" id="messageCard">
+                        <div class="card-header">
+                            <div class="decoration">🌸</div>
+                            <h3>Pétalo #<span id="reasonNumber">0</span></h3>
+                            <div class="decoration">🌸</div>
+                        </div>
+                        
+                        <div class="message-content">
+                            <div class="quote-left">"</div>
+                            <p class="reason-text" id="reasonText">
+                                Toca un pétalo de la flor o el corazón para descubrir una razón especial...
+                            </p>
+                            <div class="quote-right">"</div>
+                        </div>
+                        
+                        <div class="tip">
+                            💡 Consejo: Toca los pétalos en cualquier orden o el corazón
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mensaje final -->
+        <div class="final-container" id="finalContainer" style="display: none;">
+            <div class="final-content">
+                <div class="celebration">🎉🎂🎁</div>
+                <h2>¡Feliz Cumpleaños Mamá!</h2>
+                
+                <div class="final-message">
+                    <p>Estas son solo algunas de las infinitas razones por las que te amo.</p>
+                    <p>Cada día a tu lado es una bendición</p>
+                    <p>Gracias por ser mi guía, mi apoyo incondicional y mi mejor amiga.</p>
+                </div>
+                
+                <div class="signature">
+                    <p>De mi para tí</p>
+                    <p class="signature-name">Tu hijo</p>
+                    <p class="date">En tu día especial ❤️</p>
+                </div>
+                
+                <button class="restart-btn" id="restartBtn">
+                    🔄 Ver la flor nuevamente
+                </button>
+                
+                <button class="back-home-btn final-home-btn" id="finalHomeBtn">
+                    🏠 Volver al inicio
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

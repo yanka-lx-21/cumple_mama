@@ -1,0 +1,704 @@
+/* ===== RESET Y ESTILOS GENERALES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: linear-gradient(135deg, #fff5f7 0%, #fff0f5 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    color: #5a2d5c;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(214, 27, 96, 0.15);
+    overflow: hidden;
+    animation: fadeIn 1s ease-out;
+}
+
+/* ===== PORTADA INICIAL ===== */
+.cover {
+    padding: 5% 5%;
+    text-align: center;
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover-content h1 {
+    font-size: min(8vw, 3.8rem);
+    color: #c2185b;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.cover-content .subtitle {
+    font-size: min(4vw, 1.8rem);
+    color: #880e4f;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.cover-content .message {
+    font-size: min(3.5vw, 1.4rem);
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    border-left: 8px solid #ec407a;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.cover-content .message p {
+    margin-bottom: 15px;
+}
+
+.start-btn {
+    background: linear-gradient(to right, #d81b60, #ad1457);
+    color: white;
+    border: none;
+    padding: min(4vw, 18px) min(8vw, 50px);
+    font-size: min(4vw, 1.5rem);
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 6px 20px rgba(216, 27, 96, 0.4);
+}
+
+.start-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(216, 27, 96, 0.5);
+}
+
+/* ===== APLICACIÓN PRINCIPAL ===== */
+.main-app {
+    padding: 3%;
+    min-height: 80vh;
+}
+
+/* Encabezado con botón de volver */
+.app-header {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.back-home-btn {
+    align-self: flex-start;
+    background: #f8bbd9;
+    color: #880e4f;
+    border: 2px solid #ec407a;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-size: min(3.5vw, 1rem);
+}
+
+.back-home-btn:hover {
+    background: #ec407a;
+    color: white;
+    transform: translateX(-5px);
+}
+
+.app-header h2 {
+    font-size: min(6vw, 2.2rem);
+    color: #c2185b;
+    font-weight: bold;
+    order: 1;
+}
+
+.counter {
+    display: inline-block;
+    background: #f8bbd9;
+    padding: min(2vw, 10px) min(4vw, 25px);
+    border-radius: 30px;
+    font-size: min(3.5vw, 1.1rem);
+    font-weight: bold;
+    color: #880e4f;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    order: 2;
+}
+
+/* ===== LAYOUT PRINCIPAL ===== */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+    .content-wrapper {
+        flex-direction: row;
+    }
+}
+
+.flower-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.message-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* ===== FLOR - DISEÑO COMPLETAMENTE RESPONSIVO ===== */
+.flower-container {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.flower {
+    position: relative;
+    width: min(90vw, 300px);
+    height: min(90vw, 300px);
+    max-width: 300px;
+    max-height: 300px;
+    margin: 0 auto;
+    display: flex;
+}
+
+/* Centro de la flor */
+.flower-center {
+    position: absolute;
+    bottom: -140px; /* Usaremos variables CSS */
+    left: 165px;
+    transform: translate(-50%, -50%);
+    width: min(22vw, 70px); /* Aumentado */
+    height: min(22vw, 70px); /* Aumentado */
+    background: linear-gradient(135deg, #ff4081, #f50057);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: min(7vw, 3rem);
+    z-index: 1000;
+    box-shadow: 
+        0 0 30px rgba(255, 64, 129, 0.7),
+        0 0 50px rgba(255, 64, 129, 0.4),
+        0 0 70px rgba(255, 64, 129, 0.2);
+    animation: heartbeat 2s infinite;
+    cursor: pointer;
+}
+/* Tooltip mejorado */
+
+
+/* Mejorar visibilidad en hover */
+.flower-center:hover::after {
+    opacity: 1;
+    bottom: -40px; /* Se mueve un poco al hacer hover */
+}
+
+/* Contenedor de pétalos */
+.petals-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Pétalos - diseño responsivo */
+.petal {
+    position: absolute;
+    width: min(12vw, 50px); /* Aún más pequeño */
+    height: min(20vw, 85px); /* Aún más pequeño */
+    background: linear-gradient(to bottom, #f48fb1, #ec407a);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    box-shadow: 
+        inset 0 0 10px rgba(255, 255, 255, 0.5),
+        0 4px 8px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: min(2.5vw, 0.85rem);
+    font-weight: bold;
+    z-index: 1;
+    transform-origin: center center;
+    animation: petalAppear 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+/* Pétalos de capa externa (más grandes visualmente) */
+.petal.outer-layer {
+    background: linear-gradient(to bottom, #f48fb1, #e91e63);
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+/* Pétalos de capa interna (más cerca del centro) */
+.petal.inner-layer {
+    background: linear-gradient(to bottom, #f8bbd9, #f48fb1);
+    transform: scale(0.95);
+    z-index: 1;
+}
+
+.petal.opened {
+    background: linear-gradient(to bottom, #ce93d8, #ab47bc);
+    transform: scale(1.2);
+    z-index: 3;
+    box-shadow: 
+        inset 0 0 15px rgba(255, 255, 255, 0.8),
+        0 6px 12px rgba(171, 71, 188, 0.4);
+}
+
+.petal.opened::after {
+    content: '✓';
+    position: absolute;
+    top: min(1.5vw, 6px); /* Reducido */
+    right: min(1.5vw, 6px); /* Reducido */
+    font-size: min(2.2vw, 0.7rem); /* Reducido */
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+    width: min(4vw, 16px); /* Reducido */
+    height: min(4vw, 16px); /* Reducido */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Barra de progreso */
+.progress-container {
+    width: 100%;
+    max-width: min(85vw, 350px);
+    margin-top: 4em;
+    text-align: center;
+}
+
+.progress-bar {
+    height: 10px;
+    background: linear-gradient(to right, #f48fb1, #ec407a);
+    border-radius: 5px;
+    margin-bottom: 8px;
+    width: 0%;
+    transition: width 0.8s ease;
+}
+
+.progress-text {
+    font-size: min(3.5vw, 1rem);
+    color: #880e4f;
+    font-weight: bold;
+}
+
+/* ===== TARJETA DE MENSAJE ===== */
+.message-card {
+    background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+    border-radius: 25px;
+    padding: min(5vw, 25px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 3px solid #ec407a;
+    min-height: min(70vw, 300px);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #ce93d8;
+}
+
+.card-header h3 {
+    font-size: min(4.5vw, 1.6rem);
+    color: #8e24aa;
+    font-weight: bold;
+}
+
+.card-header .decoration {
+    font-size: min(5vw, 1.8rem);
+    color: #ec407a;
+}
+
+.message-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 min(4vw, 15px);
+}
+
+.quote-left, .quote-right {
+    font-size: min(10vw, 4rem);
+    color: #ec407a;
+    opacity: 0.7;
+    position: absolute;
+}
+
+.quote-left {
+    top: min(-3vw, -15px);
+    left: 0;
+}
+
+.quote-right {
+    bottom: min(-6vw, -30px);
+    right: 0;
+}
+
+.reason-text {
+    font-size: min(4vw, 1.4rem);
+    line-height: 1.7;
+    color: #4a148c;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: min(4vw, 15px) 0;
+    font-style: italic;
+    min-height: min(40vw, 150px);
+    transition: all 0.5s ease;
+}
+
+.tip {
+    margin-top: 15px;
+    padding: min(3vw, 10px);
+    background: rgba(248, 187, 217, 0.3);
+    border-radius: 15px;
+    text-align: center;
+    font-size: min(3.5vw, 1rem);
+    color: #ad1457;
+    font-style: italic;
+}
+
+/* ===== MENSAJE FINAL ===== */
+.final-container {
+    padding: 5% 5%;
+    text-align: center;
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.final-content {
+    max-width: 700px;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.celebration {
+    font-size: min(12vw, 4rem);
+    margin-bottom: 25px;
+    animation: bounce 2s infinite;
+}
+
+.final-content h2 {
+    font-size: min(7vw, 2.5rem);
+    color: #c2185b;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.final-message {
+    font-size: min(4vw, 1.3rem);
+    line-height: 1.8;
+    color: #4a148c;
+    margin-bottom: 40px;
+    padding: min(5vw, 20px);
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.final-message p {
+    margin-bottom: 15px;
+}
+
+.signature {
+    margin: 30px 0;
+    padding: min(5vw, 20px);
+    background: white;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.signature-name {
+    font-size: min(6vw, 2.2rem);
+    color: #d81b60;
+    font-weight: bold;
+    margin: 10px 0;
+    font-family: cursive;
+}
+
+.date {
+    font-size: min(3.5vw, 1.2rem);
+    color: #8e24aa;
+    font-style: italic;
+}
+
+.restart-btn, .final-home-btn {
+    background: linear-gradient(to right, #d81b60, #ad1457);
+    color: white;
+    border: none;
+    padding: min(4vw, 15px) min(8vw, 35px);
+    font-size: min(3.5vw, 1.2rem);
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 6px 20px rgba(216, 27, 96, 0.4);
+}
+
+.restart-btn:hover, .final-home-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(216, 27, 96, 0.5);
+}
+
+.final-home-btn {
+    background: #f8bbd9;
+    color: #880e4f;
+    border: 2px solid #ec407a;
+}
+
+.final-home-btn:hover {
+    background: #ec407a;
+    color: white;
+}
+
+/* ===== ANIMACIONES ===== */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes heartbeat {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.1); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* ===== MEJORAS RESPONSIVE ESPECÍFICAS ===== */
+@media (max-width: 768px) {
+    .container {
+        border-radius: 20px;
+    }
+    
+    .cover {
+        padding: 30px 20px;
+    }
+    
+    .main-app {
+        padding: 20px 15px;
+    }
+    
+    .app-header {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .back-home-btn {
+        align-self: center;
+        order: 3;
+        margin-top: 10px;
+    }
+    
+    .content-wrapper {
+        gap: 20px;
+    }
+    
+    .flower {
+        width: min(90vw, 320px);
+        height: min(90vw, 320px);
+    }
+    
+    .petal {
+        width: min(14vw, 55px);
+        height: min(23vw, 90px);
+        font-size: min(2.8vw, 0.9rem);
+    }
+    
+    .message-card {
+        min-height: min(80vw, 250px);
+    }
+    
+    .reason-text {
+        min-height: min(50vw, 120px);
+    }
+
+    .flower-center::after {
+        opacity: 1;
+        font-size: min(3.5vw, 0.85rem);
+        bottom: -40px;
+        padding: 5px 10px;
+        background: rgba(214, 27, 96, 0.95);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        border-radius: 15px;
+    }
+    
+    .cover-content .message {
+        padding: 15px;
+        margin: 20px auto;
+    }
+    
+    .flower {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .petal {
+        width: 48px;
+        height: 80px;
+    }
+    
+    .message-card {
+        padding: 20px;
+    }
+    
+    .final-container {
+        padding: 30px 20px;
+    }
+}
+/* Añade esto al final del archivo style.css */
+
+/* ===== INDICADOR DE CLICK EN EL CORAZÓN ===== */
+.flower-center {
+    cursor: pointer;
+    position: relative;
+}
+
+.petal span {
+    font-size: min(3.5vw, 1rem) !important; /* Aumentado para mejor legibilidad */
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    transform-origin: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Para móviles, muestra el tooltip siempre */
+@media (max-width: 768px) {
+    .flower-center::after {
+        opacity: 0.7;
+        font-size: 0.8rem;
+        bottom: -25px;
+    }
+}
+
+/* Efecto especial cuando todos los pétalos están abiertos */
+.flower-center.all-open {
+    animation: pulse 0.8s infinite, glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 25px rgba(255, 64, 129, 0.6); }
+    to { box-shadow: 0 0 40px rgba(255, 64, 129, 0.9), 0 0 60px rgba(255, 64, 129, 0.4); }
+}
+
+/* Añade esto al final del archivo style.css */
+
+/* ===== ANIMACIÓN DE ENTRADA PARA LOS PÉTALOS ===== */
+@keyframes petalAppear {
+    0% {
+        opacity: 0;
+        transform: translate(var(--start-x), var(--start-y)) scale(0.3) rotate(0deg);
+    }
+    70% {
+        opacity: 0.9;
+        transform: translate(var(--final-x), var(--final-y)) scale(1.1) rotate(var(--final-rotation));
+    }
+    100% {
+        opacity: 1;
+        transform: translate(var(--final-x), var(--final-y)) scale(1) rotate(var(--final-rotation));
+    }
+}
+
+/* Aplicar animación de entrada a los pétalos */
+.petal {
+    animation: petalAppear 0.8s ease-out forwards;
+    opacity: 0; /* Empiezan invisibles */
+}
+
+/* Retraso escalonado para cada pétalo */
+.petal:nth-child(1) { animation-delay: 0.1s; }
+.petal:nth-child(2) { animation-delay: 0.15s; }
+.petal:nth-child(3) { animation-delay: 0.2s; }
+.petal:nth-child(4) { animation-delay: 0.25s; }
+.petal:nth-child(5) { animation-delay: 0.3s; }
+.petal:nth-child(6) { animation-delay: 0.35s; }
+.petal:nth-child(7) { animation-delay: 0.4s; }
+.petal:nth-child(8) { animation-delay: 0.45s; }
+.petal:nth-child(9) { animation-delay: 0.5s; }
+.petal:nth-child(10) { animation-delay: 0.55s; }
+.petal:nth-child(11) { animation-delay: 0.6s; }
+.petal:nth-child(12) { animation-delay: 0.65s; }
+.petal:nth-child(13) { animation-delay: 0.7s; }
+.petal:nth-child(14) { animation-delay: 0.75s; }
+.petal:nth-child(15) { animation-delay: 0.8s; }
+.petal:nth-child(16) { animation-delay: 0.85s; }
+.petal:nth-child(17) { animation-delay: 0.9s; }
+.petal:nth-child(18) { animation-delay: 0.95s; }
+.petal:nth-child(19) { animation-delay: 1.0s; }
+.petal:nth-child(20) { animation-delay: 1.05s; }
+.petal:nth-child(21) { animation-delay: 1.1s; }
+.petal:nth-child(22) { animation-delay: 1.15s; }
+.petal:nth-child(23) { animation-delay: 1.2s; }
+.petal:nth-child(24) { animation-delay: 1.25s; }
+.petal:nth-child(25) { animation-delay: 1.3s; }
+.petal:nth-child(26) { animation-delay: 1.35s; }
+.petal:nth-child(27) { animation-delay: 1.4s; }
+.petal:nth-child(28) { animation-delay: 1.45s; }
+.petal:nth-child(29) { animation-delay: 1.5s; }
+.petal:nth-child(30) { animation-delay: 1.55s; }
